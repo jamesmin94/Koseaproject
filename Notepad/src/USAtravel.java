@@ -19,7 +19,7 @@ public class USAtravel {
    
    
    
-   public USAtravel( ){
+   public USAtravel(){
 
       // 프레임 생성
       JFrame frm = new JFrame("Welcome to the Sunshine state!");
@@ -39,7 +39,7 @@ public class USAtravel {
       
       
       // 버튼 생성
-      JButton btn1 = new JButton("Hotel Inform");
+      JButton btn1 = new JButton("Attractions");
       JButton btn2 = new JButton("Attractions");
       JButton btn3 = new JButton("Journey`s Note");
       JButton btnNewButton_3 = new JButton("Ferre Park");
@@ -51,8 +51,8 @@ public class USAtravel {
       
       
       
-      
-      btnNewButton_3.setIcon(new ImageIcon("C:\\Minjunhee\\Notepad\\img\\florida.png"));
+      //btn2.setIcon(defaultIcon);
+      btnNewButton_3.setIcon(new ImageIcon("C:\\Users\\user\\git\\Koseaproject\\Notepad\\img\\florida.png"));
       
       // ★ 버튼 위치와 크기 설정
       btn1.setBounds(32, 326, 146, 35);
@@ -68,7 +68,7 @@ public class USAtravel {
       
       // ★ 프레임에다가 버튼 추가
       frm.getContentPane().add(btn1);
-      frm.getContentPane().add(btn2);
+      //frm.getContentPane().add(btn2);
       frm.getContentPane().add(btn3);
       frm.getContentPane().add(btnNewButton_3);
       
@@ -93,7 +93,11 @@ public class USAtravel {
       
       
       
-      btn2.addActionListener(new ActionListener() {
+      
+      
+      
+      
+      btn1.addActionListener(new ActionListener() {
       
       @Override
       public void actionPerformed(ActionEvent e) {
@@ -103,6 +107,38 @@ public class USAtravel {
          
       }
    });
+      
+      btnNewButton_3.addActionListener(new ActionListener(){
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			if(e.getSource() == btnNewButton_3){
+				try {
+					Process p = Runtime.getRuntime().exec(
+							"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe \"https://www.instagram.com/visitflorida/?hl=ko/\"");
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			
+		}
+    	  
+    	  
+    	  
+    	  
+    	  
+    	  
+      });
+      
+    
+      
       
       
       

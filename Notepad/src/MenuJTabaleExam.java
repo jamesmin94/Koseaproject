@@ -1,4 +1,3 @@
-
 //MenuJTabaleExam.java
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -42,6 +41,9 @@ public class MenuJTabaleExam extends JFrame implements ActionListener {
 
    UserDefaultJTableDAO dao = new UserDefaultJTableDAO();
 
+   //검색시 대소문자 구별함
+   //ID중복체크 대소문자 구별 X 
+   
    /**
     * 화면구성 및 이벤트등록
     */

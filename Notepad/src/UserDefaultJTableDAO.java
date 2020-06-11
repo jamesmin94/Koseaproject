@@ -175,7 +175,7 @@ public class UserDefaultJTableDAO {
      * Statement객체를 이용함)
      * */
     public void getUserSearch(DefaultTableModel dt, String fieldName, String word) {
-        String sql = "SELECT * FROM TB_INFORM1 WHERE " + fieldName.trim() + " LIKE '%' || ? || '%'";
+        String sql = "SELECT * FROM TB_INFORM1 WHERE UPPER( " + fieldName.toUpperCase() + ") LIKE '%' || UPPER(?) || '%'";    ///검색시 대소문자 상관없이 검색되는 쿼리  //// 6/11  
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, word.trim());
