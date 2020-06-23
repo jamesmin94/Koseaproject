@@ -44,8 +44,12 @@ public class UserJDailogGUI extends JDialog implements ActionListener {
 	
 	
 	UserDefaultJTableDAO dao = new UserDefaultJTableDAO();
-
+    
+	
+	
+	
 	public UserJDailogGUI(MenuJTabaleExam me, String index) {
+	
 		super(me, "Dialouge");
 		this.me = me;
 		if (index.equals("Registration")) {
@@ -113,11 +117,16 @@ public class UserJDailogGUI extends JDialog implements ActionListener {
 		if (btnLabel.equals("Registration")) {
 			
 			
-			if(SNSADDRESS.getText().trim().equals("")&& address.getText().trim().equals("")){
-				messageBox(this, "Please write their SNSADDRESS and physical address. If you did not know their SNS address or physical address just write Null");  
+			if(name.getText().trim().equals("") && SNSADDRESS.getText().trim().equals("")&& address.getText().trim().equals("")){
+				messageBox(this, "Please write their Name, SNSADDRESS, and physical address. If you were not know their SNS address or physical address just write null");  
 				setDefaultCloseOperation(EXIT_ON_CLOSE);
 				
-		       	}
+		       	}   
+			
+			if(SNSADDRESS.getText().trim().equals("")&& address.getText().trim().equals("")){messageBox(this, "Please write their SNSADDRESS, and physical address. If you were not know their SNS address or physical address just write null");  
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			};
+			
 			
 			if(SNSADDRESS.getText().trim().equals("")){
 				messageBox(this, "Please write their snsaddress if you were not know their snsaddress just write null");
@@ -129,7 +138,7 @@ public class UserJDailogGUI extends JDialog implements ActionListener {
 			
 			
 			else if(address.getText().trim().equals("")){
-				messageBox(this, "please write your address field if you were not have address field just write null or whatever you want");
+				messageBox(this, "please write thier address in address field if you were not know their physical address field just write null or whatever you want");
 				setDefaultCloseOperation(EXIT_ON_CLOSE);
 				
 				

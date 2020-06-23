@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
- 
+
 import javax.swing.table.DefaultTableModel;
  
 public class UserDefaultJTableDAO {
@@ -16,8 +16,7 @@ public class UserDefaultJTableDAO {
     Connection con;
     Statement st;
     PreparedStatement ps;
-    ResultSet rs;
- 
+    ResultSet rs;   
     /**
      * 로드 연결을 위한 생성자
      * */
@@ -101,7 +100,7 @@ public class UserDefaultJTableDAO {
      * userlist의 모든 레코드 조회
      * */
     public void userSelectAll(DefaultTableModel t_model) {
-        try {
+    	try {
             st = con.createStatement();
             rs = st.executeQuery("select * from TB_INFORM1 order by id");
  
@@ -200,4 +199,10 @@ public class UserDefaultJTableDAO {
         }
  
     }
-    }// 클래스끝
+    
+
+
+
+
+
+}// 클래스끝

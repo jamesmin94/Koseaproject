@@ -22,7 +22,7 @@ public class USAtravel {
    public USAtravel(){
 
       // 프레임 생성
-      JFrame frm = new JFrame("Welcome to the Sunshine state!");
+      JFrame frm = new JFrame("Welcome to the Sunshine State!");
 
       // 프레임 크기 설정
       frm.setSize(576, 456);
@@ -40,7 +40,7 @@ public class USAtravel {
       
       // 버튼 생성
       JButton btn1 = new JButton("Attractions");
-      JButton btn2 = new JButton("Attractions");
+      JButton btn2 = new JButton("Into the Web");
       JButton btn3 = new JButton("Journey`s Note");
       JButton btnNewButton_3 = new JButton("Ferre Park");
       

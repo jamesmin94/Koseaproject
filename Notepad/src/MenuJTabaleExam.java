@@ -33,7 +33,7 @@ public class MenuJTabaleExam extends JFrame implements ActionListener {
     * South 영역에 추가할 Componet들
     */
    JPanel p = new JPanel();
-   String[] comboName = { "  ALL  ", "  ID  ", " name ", " address " };
+   String[] comboName = { "  ALL  ", "  ID  ", " name ", " address ", " SNSADDRE " };
 
    JComboBox combo = new JComboBox(comboName);
    JTextField jtf = new JTextField(20);
@@ -140,7 +140,7 @@ public class MenuJTabaleExam extends JFrame implements ActionListener {
                jt.setRowSelectionInterval(0, 0);
          } else {
             if (jtf.getText().trim().equals("")) {
-               UserJDailogGUI.messageBox(this, "Please write word whatever you want");
+               UserJDailogGUI.messageBox(this, "Please write something whatever you want");
                jtf.requestFocus();
             } else {// 검색어를 입력했을경우
                dao.getUserSearch(dt, fieldName, jtf.getText());
